@@ -25,5 +25,5 @@ typedef const char* cstr;
 typedef const wchar_t* cwcs;
 
 #define NOMANGLE extern "C"
-#define DLLEXPORT __declspec(dllexport) NOMANGLE
+#define DLLEXPORT NOMANGLE __declspec(dllexport)
 #define MASM NOMANGLE
