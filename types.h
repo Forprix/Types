@@ -1,14 +1,23 @@
 #pragma once
 
-typedef unsigned char uint8;
-typedef unsigned short uint16;
-typedef unsigned long uint32;
-typedef unsigned long long uint64;
 
-typedef char int8;
-typedef short int16;
-typedef long int32;
-typedef long long int64;
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned long u32;
+typedef unsigned long long u64;
+
+typedef char i8;
+typedef short i16;
+typedef long i32;
+typedef long long i64;
+
+#if _WIN64
+typedef u64 usize;
+#elif _WIN32
+typedef u32 usize;
+#else
+#error Windows Required
+#endif
 
 typedef wchar_t wchar;
 
