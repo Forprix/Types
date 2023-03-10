@@ -1,6 +1,4 @@
 #pragma once
-
-
 typedef unsigned char u8;
 typedef unsigned short u16;
 typedef unsigned long u32;
@@ -25,3 +23,7 @@ typedef char* str;
 typedef wchar_t* wcs;
 typedef const char* cstr;
 typedef const wchar_t* cwcs;
+
+#define NOMANGLE extern "C"
+#define DLLEXPORT __declspec(dllexport) NOMANGLE
+#define MASM NOMANGLE
